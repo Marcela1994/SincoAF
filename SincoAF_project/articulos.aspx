@@ -11,11 +11,12 @@
         <br />
         <br />
         <hr />
-        <asp:GridView ID="gr_listadoUsuarios" runat="server" AutoGenerateColumns="False">
+        <center><asp:GridView ID="gr_listadoArticulos" runat="server" AutoGenerateColumns="False" Font-Bold="True" Font-Italic="True" Height="194px" Width="391px">
             <Columns>
-                <asp:BoundField AccessibleHeaderText="ID_USUARIO" DataField="codigo_usuario" HeaderText="ID_USUARIO" />
-                <asp:BoundField AccessibleHeaderText="NOMBRE_USUARIO" DataField="nombre_usuario" HeaderText="NOMBRE_USUARIO" />
+                <asp:BoundField AccessibleHeaderText="codigo_articulo" DataField="codigo_articulo" HeaderText="CODIGO DEL ARTICULO" />
+                <asp:BoundField AccessibleHeaderText="nombre_articulo" DataField="nombre_articulo" HeaderText="NOMBRE DEL ARTICULO" />
             </Columns>
+            <RowStyle BackColor="#99CCFF" BorderColor="#0033CC" />
         </asp:GridView>
         <br />
     </form>
@@ -23,30 +24,5 @@
     <br />
     <hr />
     <br />
-    <table class="table table-striped table-dark">
-        <thead>
-            <tr>
-                <th scope="col">CODIGO</th>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">ELIMINAR</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td contenteditable="true">Mark</td>
-                <td class="boton_borrar"><a role="button">BORRAR</a></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td contenteditable="true">Jacob</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td contenteditable="true">Larry</td>
-            </tr>
-        </tbody>
-    </table>
-
     <a class="boton_volver" href="index.aspx" role="button">REGRESAR</a>
 </asp:Content>

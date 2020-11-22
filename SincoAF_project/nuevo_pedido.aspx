@@ -3,17 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <form>
+    <form id="form1" runat="server">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="usuario">USUARIO</label>
-                <select id="selec_usuario" class="form-control">
-                    <option selected>SELECCIONE EL USUARIO</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
+                <label for="usuario">USUARIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>&nbsp;<asp:DropDownList ID="mostrar_usuarios" runat="server" Height="18px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="333px">
+                </asp:DropDownList>
+                
             </div>
             <div class="form-group col-md-6">
                 <label for="fecha">FECHA</label>

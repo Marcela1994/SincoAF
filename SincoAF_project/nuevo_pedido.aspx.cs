@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,12 @@ namespace SincoAF_project
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NuevoPedido np = new NuevoPedido();
+            mostrar_usuarios.DataSource = np.listarUsuarios();
         }
     }
 }

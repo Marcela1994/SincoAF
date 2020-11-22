@@ -12,7 +12,9 @@ namespace SincoAF_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Articulos art = new Articulos();
+            gr_listadoArticulos.DataSource = art.listarArticulos();
+            gr_listadoArticulos.DataBind();
         }
 
         protected void crearArticulo_click(object sender, EventArgs e) {

@@ -14,9 +14,10 @@
 
 <body class="container">
     <h1 class="titulo">SINCO A&F</h1>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="usuarios.aspx">USUARIOS</a>
                 </li>
@@ -36,5 +37,13 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+    <br />
+    <br />
+    <hr />
+    <footer>
+        <h6>Deisy Marcela Cuellar Galvira</h6>
+        <p>&copy; <%: DateTime.Now.Year %></p>
+    </footer>
 </body>
 </html>
