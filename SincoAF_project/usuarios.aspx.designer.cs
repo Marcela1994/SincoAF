@@ -60,15 +60,6 @@ namespace SincoAF_project
         protected global::System.Web.UI.WebControls.Button btnCrearUser;
 
         /// <summary>
-        /// Control ddl_usuarios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_usuarios;
-
-        /// <summary>
         /// Control gr_listadoUsuarios.
         /// </summary>
         /// <remarks>

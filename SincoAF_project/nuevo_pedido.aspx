@@ -6,18 +6,15 @@
     <form id="form1" runat="server">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="usuario">USUARIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>&nbsp;<asp:DropDownList ID="mostrar_usuarios" runat="server" Height="18px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="333px">
-                </asp:DropDownList>
-                
+                <label for="usuario">USUARIO:</label> <asp:DropDownList runat="server" ID="ddl_usuarios" Height="39px" Width="200px"></asp:DropDownList>
             </div>
-            <div class="form-group col-md-6">
-                <label for="fecha">FECHA</label>
-                <input type="text" class="form-control" id="ingreso_fecha" name="ingreso_fecha">
+            <div class="form-group col-md-3">
+                <label for="fecha">FECHA</label> <asp:TextBox type="text" ID="txt_fechaPedido" runat="server" placeHolder="DD/MM/AAAA"></asp:TextBox>                
             </div>
         </div>
         <div class="form-group">
             <label for="concepto">CONCEPTO</label>
-            <input type="text" class="form-control" id="ingreso_concepto" name="ingreso_concepto">
+            <asp:TextBox type="text" ID="txt_conceptoPedido" runat="server" placeHolder="DD/MM/AAAA" Width="788px"></asp:TextBox>
         </div>
         <div class="form-group">
 
@@ -30,31 +27,22 @@
                 <tbody>
                     <tr>
                         <th>
-                            <label for="articulo">ARTICULO</label>
-                            <select id="selec_articulo" class="form-control">
-                                <option selected>SELECCIONE EL ARTICULO</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
+                            <label for="articulo">ARTICULO:&nbsp;&nbsp; </label>
+                            &nbsp;<asp:DropDownList runat="server" ID="ddl_articulos" Height="33px" Width="134px"></asp:DropDownList>
                         </th>
                         <td>
                             <div>
                                 <label for="cantidad">CANTIDAD</label>
-                                <input type="text" class="form-control" id="ingreso_cantidad">
+                                <asp:TextBox type="text" ID="txt_cantidad" runat="server"></asp:TextBox>
                             </div>
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="check_importado">
-                                <label class="form-check-label" for="importado">
-                                    IMPORTADO
-                                </label>
+                                &nbsp;<asp:CheckBox ID="cb_importado" runat="server" Text="IMPORTADO"/>
                             </div>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-link">AGREGAR PRODUCTO</button>
+                            <asp:Button ID="btnCrearUser" CssClass="btn btn-primary" Text="AGREGAR ARTICULO" runat="server" OnClick="" />
                         </td>
                     </tr>
                 </tbody>
@@ -63,7 +51,7 @@
 
             
         </div>
-        <button type="submit" class="btn btn-primary">GUARDAR PEDIDO</button>
+        <asp:Button ID="Button1" CssClass="btn btn-primary" Text="CREAR PEDIDO" runat="server" OnClick="crearPedido_click" />
     </form>
 
 </asp:Content>

@@ -32,7 +32,7 @@ namespace Backend
         public DataTable listarUsuarios()
         {
             DataTable dt;
-            SqlConnection con = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Initial Catalog=SincoAF;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Server=(localdb)\\marcela;Initial Catalog=SincoAF_DB;Integrated Security=True");
             con.Open();
             using (SqlCommand cmd = new SqlCommand("sp_listar_usuarios", con))
             {
