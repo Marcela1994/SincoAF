@@ -32,7 +32,7 @@ namespace Backend
         public DataTable listarUsuarios()
         {
             DataTable dt;
-            SqlConnection con = new SqlConnection("Server=(localdb)\\marcela;Initial Catalog=SincoAF_DB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Initial Catalog=SincoAF;Integrated Security=True");
             con.Open();
             using (SqlCommand cmd = new SqlCommand("sp_listar_usuarios", con))
             {
@@ -42,6 +42,45 @@ namespace Backend
                 da.Fill(dt);
                 con.Close();
                 return dt;
+            }
+        }
+
+        public int eliminarUsuario(string codigo_usuario)
+        {
+            try
+            {
+                ConexionBD con = new ConexionBD();
+                SqlConnection connection = con.crearConexion();
+                connection.Open();
+                SqlCommand eliminarUsuarioSP = new SqlCommand("sp_eliminar_usuario", connection);
+                eliminarUsuarioSP.CommandType = System.Data.CommandType.StoredProcedure;
+                eliminarUsuarioSP.Parameters.Add(new SqlParameter("@codigo_usuario", codigo_usuario));
+                int resultado = eliminarUsuarioSP.ExecuteNonQuery();
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public int editarUsuario(string codigo_usuario, string nombre)
+        {
+            try
+            {
+                ConexionBD con = new ConexionBD();
+                SqlConnection connection = con.crearConexion();
+                connection.Open();
+                SqlCommand editarUsuarioSP = new SqlCommand("sp_modificar_usuario", connection);
+                editarUsuarioSP.CommandType = System.Data.CommandType.StoredProcedure;
+                editarUsuarioSP.Parameters.Add(new SqlParameter("@codigo_usuario", codigo_usuario));
+                editarUsuarioSP.Parameters.Add(new SqlParameter("@nombre", nombre));
+                int resultado = editarUsuarioSP.ExecuteNonQuery();
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }

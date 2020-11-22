@@ -14,10 +14,13 @@
         <br />
         <br />
         <hr />
-        <asp:GridView ID="gr_listadoUsuarios" runat="server" AutoGenerateColumns="False">
+        <asp:GridView ID="gr_listadoUsuarios" runat="server" AutoGenerateColumns="False" AllowPaging="True" DataKeyNames="codigo_usuario,nombre_usuario"
+            AllowSorting="True" OnSelectedIndexChanged="gr_listadoUsuarios_SelectedIndexChanged" OnRowDeleting="gr_listadoUsuarios_RowDeleting">
             <Columns>
-                <asp:BoundField AccessibleHeaderText="ID_USUARIO" DataField="codigo_usuario" HeaderText="ID_USUARIO" />
-                <asp:BoundField AccessibleHeaderText="NOMBRE_USUARIO" DataField="nombre_usuario" HeaderText="NOMBRE_USUARIO" />
+                <asp:BoundField AccessibleHeaderText="codigo_usuario" DataField="codigo_usuario" HeaderText="codigo_usuario" />
+                <asp:BoundField AccessibleHeaderText="nombre_usuario" DataField="nombre_usuario" HeaderText="nombre_usuario" />
+                <asp:ButtonField AccessibleHeaderText="Editar" CommandName="Select" Text="Editar" />
+                <asp:ButtonField CommandName="Delete" Text="Eliminar" />
             </Columns>
         </asp:GridView>
         <br />
