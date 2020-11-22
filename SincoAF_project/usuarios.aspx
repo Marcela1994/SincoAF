@@ -7,18 +7,18 @@
             <h1>Gestor de usuarios</h1>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <asp:Label ID="lbl_codigo" runat="server">CODIGO DE REGISTRO</asp:Label>
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <asp:Label ID="lbl_nombre" runat="server">NOMBRE COMPLETO</asp:Label>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <asp:TextBox type="text" ID="txt_codigo" runat="server"></asp:TextBox>
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <asp:TextBox type="text" ID="txt_nombre" runat="server"></asp:TextBox>
             </div>
         </div>
