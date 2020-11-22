@@ -5,7 +5,7 @@ namespace Backend
 {
     public class ConexionBD
     {
-        static string cadenaConexion = "Server=(localdb)\\marcela;Initial Catalog=SincoAF_DB;Integrated Security=True";
+        static string cadenaConexion = "Server=(localdb)\\MSSQLLocalDB;Initial Catalog=SincoAF;Integrated Security=True";
 
         public SqlConnection crearConexion()
         {
