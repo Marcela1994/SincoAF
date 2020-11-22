@@ -24,15 +24,6 @@ namespace SincoAF_project
         protected global::System.Web.UI.WebControls.Label lbl_codigo;
 
         /// <summary>
-        /// Control txt_codigo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_codigo;
-
-        /// <summary>
         /// Control lbl_nombre.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace SincoAF_project
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_nombre;
+
+        /// <summary>
+        /// Control txt_codigo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_codigo;
 
         /// <summary>
         /// Control txt_nombre.
@@ -58,6 +58,15 @@ namespace SincoAF_project
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCrearUser;
+
+        /// <summary>
+        /// Control ddl_usuarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_usuarios;
 
         /// <summary>
         /// Control gr_listadoUsuarios.

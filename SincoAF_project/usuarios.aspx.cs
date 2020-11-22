@@ -21,6 +21,11 @@ namespace SincoAF_project
             Usuarios usuario = new Usuarios();
             gr_listadoUsuarios.DataSource = usuario.listarUsuarios();
             gr_listadoUsuarios.DataBind();
+            
+            ddl_usuarios.DataSource = usuario.listarUsuarios();
+            ddl_usuarios.DataTextField = "nombre_usuario";
+            ddl_usuarios.DataValueField = "codigo_usuario";
+            ddl_usuarios.DataBind();
         }
 
         protected void crearUsuario_click(object sender, EventArgs e)
