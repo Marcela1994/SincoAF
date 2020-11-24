@@ -12,11 +12,15 @@ namespace SincoAF_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            cargarListadoArticulos();
+        }
+
+        private void cargarListadoArticulos()
+        {
             Articulos art = new Articulos();
             gr_listadoArticulos.DataSource = art.listarArticulos();
             gr_listadoArticulos.DataBind();
         }
-
         protected void crearArticulo_click(object sender, EventArgs e) {
             string nombre = txt_nombreArt.Text;
             Articulos art = new Articulos();
@@ -25,6 +29,7 @@ namespace SincoAF_project
             if (resultado > 0)
             {
                 Response.Write("<script>alert('Articulo registrado correctamente');</script>");
+                cargarListadoArticulos();
             }
             else
             {

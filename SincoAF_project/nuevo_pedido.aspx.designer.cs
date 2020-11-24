@@ -15,13 +15,13 @@ namespace SincoAF_project
     {
 
         /// <summary>
-        /// Control form1.
+        /// Control formularioPedido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formularioPedido;
 
         /// <summary>
         /// Control ddl_usuarios.
@@ -78,13 +78,22 @@ namespace SincoAF_project
         protected global::System.Web.UI.WebControls.CheckBox cb_importado;
 
         /// <summary>
-        /// Control btnCrearUser.
+        /// Control btnAgregarArticulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearUser;
+        protected global::System.Web.UI.WebControls.Button btnAgregarArticulo;
+
+        /// <summary>
+        /// Control gr_articulosPedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gr_articulosPedido;
 
         /// <summary>
         /// Control Button1.

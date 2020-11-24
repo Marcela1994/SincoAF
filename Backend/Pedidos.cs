@@ -11,7 +11,7 @@ namespace Backend
         public DataTable cargarPedidosPendientes()
         {
             DataTable dt;
-            SqlConnection con = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Initial Catalog=SincoAF;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Server=(localdb)\\marcela;Initial Catalog=SincoAF_DB;Integrated Security=True");
             con.Open();
             using (SqlCommand cmd = new SqlCommand("sp_cargar_pedidos_pendientes", con))
             {
@@ -27,7 +27,7 @@ namespace Backend
         public DataTable cargarPedidosCompletos()
         {
             DataTable dt;
-            SqlConnection con = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Initial Catalog=SincoAF;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Server=(localdb)\\marcela;Initial Catalog=SincoAF_DB;Integrated Security=True");
             con.Open();
             using (SqlCommand cmd = new SqlCommand("sp_cargar_pedidos_completos", con))
             {

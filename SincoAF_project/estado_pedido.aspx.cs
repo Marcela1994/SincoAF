@@ -12,16 +12,20 @@ namespace SincoAF_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarListadoPedidos();
+            cargarListadoPedidosPendientes();
+            cargarListadoPedidosCompletos();
         }
 
-        private void cargarListadoPedidos()
+        private void cargarListadoPedidosPendientes()
         {
             Pedidos pedidos = new Pedidos();
             gr_pedidos_pendientes.DataSource = pedidos.cargarPedidosPendientes();
             gr_pedidos_pendientes.DataBind();
+        }
 
-            pedidos = new Pedidos();
+        private void cargarListadoPedidosCompletos()
+        {
+            Pedidos pedidos = new Pedidos();
             gr_pedidos_completos.DataSource = pedidos.cargarPedidosCompletos();
             gr_pedidos_completos.DataBind();
         }
@@ -42,7 +46,25 @@ namespace SincoAF_project
             {
                 Response.Write("<script>alert('No se pudo completar el pedido');</script>");
             }
-            cargarListadoPedidos();
+            cargarListadoPedidosPendientes();
+            cargarListadoPedidosCompletos();
+        }
+
+        protected void gr_pedidos_pendientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gr_pedidos_pendientes.PageIndex = e.NewPageIndex;
+            Pedidos pedidos = new Pedidos();
+            gr_pedidos_pendientes.DataSource = pedidos.cargarPedidosPendientes();
+            gr_pedidos_pendientes.DataBind();
+
+        }
+
+        protected void gr_pedidos_completos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gr_pedidos_completos.PageIndex = e.NewPageIndex;
+            Pedidos pedidos = new Pedidos();
+            gr_pedidos_completos.DataSource = pedidos.cargarPedidosCompletos();
+            gr_pedidos_completos.DataBind();
         }
     }
 }

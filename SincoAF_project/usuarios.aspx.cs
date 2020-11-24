@@ -33,6 +33,7 @@ namespace SincoAF_project
             if (resultado > 0)
             {
                 Response.Write("<script>alert('Usuario registrado correctamente');</script>");
+                cargarListadoUsuarios();
             }
             else
             {

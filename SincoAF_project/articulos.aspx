@@ -6,7 +6,7 @@
         <br />
         <br />
         <asp:Label ID="lbl_nombre" runat="server">NOMBRE COMPLETO</asp:Label>
-        <asp:TextBox type="text" ID="txt_nombreArt" runat="server"></asp:TextBox>
+        <asp:TextBox type="text" ID="txt_nombreArt" runat="server" required="true"></asp:TextBox>
         <asp:Button ID="btnCrearUser" CssClass="btn btn-primary" Text="CREAR" runat="server" OnClick="crearArticulo_click" />
         <br />
         <br />

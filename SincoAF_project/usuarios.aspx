@@ -16,10 +16,10 @@
         </div>
         <div class="row">
             <div class="col-4">
-                <asp:TextBox type="text" ID="txt_codigo" runat="server"></asp:TextBox>
+                <asp:TextBox type="text" ID="txt_codigo" runat="server" required="true"></asp:TextBox>
             </div>
             <div class="col-4">
-                <asp:TextBox type="text" ID="txt_nombre" runat="server"></asp:TextBox>
+                <asp:TextBox type="text" ID="txt_nombre" runat="server" required="true"></asp:TextBox>
             </div>
         </div>
         <br />
@@ -27,15 +27,16 @@
         <br />
         <br />
         <hr />
-        <asp:GridView ID="gr_listadoUsuarios" runat="server" AutoGenerateColumns="False" AllowPaging="True" DataKeyNames="codigo_usuario,nombre_usuario"
-            AllowSorting="True" OnSelectedIndexChanged="gr_listadoUsuarios_SelectedIndexChanged" OnRowDeleting="gr_listadoUsuarios_RowDeleting">
+        <center><asp:GridView ID="gr_listadoUsuarios" runat="server" AutoGenerateColumns="False" AllowPaging="True" DataKeyNames="codigo_usuario,nombre_usuario"
+            AllowSorting="True" OnSelectedIndexChanged="gr_listadoUsuarios_SelectedIndexChanged" OnRowDeleting="gr_listadoUsuarios_RowDeleting" Width="447px">
             <Columns>
-                <asp:BoundField AccessibleHeaderText="codigo_usuario" DataField="codigo_usuario" HeaderText="codigo_usuario" />
-                <asp:BoundField AccessibleHeaderText="nombre_usuario" DataField="nombre_usuario" HeaderText="nombre_usuario" />
+                <asp:BoundField AccessibleHeaderText="codigo_usuario" DataField="codigo_usuario" HeaderText="CODIGO DE USUARIO" />
+                <asp:BoundField AccessibleHeaderText="nombre_usuario" DataField="nombre_usuario" HeaderText="NOMBRE DE USUARIO" />
                 <asp:ButtonField AccessibleHeaderText="Editar" CommandName="Select" Text="Editar" />
                 <asp:ButtonField CommandName="Delete" Text="Eliminar" />
             </Columns>
-        </asp:GridView>
+            <RowStyle BackColor="#99CCFF" BorderColor="#000099" />
+        </asp:GridView></center>
         <br />
     </form>
     
